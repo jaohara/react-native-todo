@@ -1,5 +1,5 @@
 import ScreenView from "../ui/ScreenView";
-import StyledText from "../ui/Styled"
+import StyledText from "../ui/StyledText";
 
 const TodoScreen = ({ }) => {
   return (

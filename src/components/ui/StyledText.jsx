@@ -7,7 +7,7 @@ const StyledText = ({ children }) => {
 
   const style = StyleSheet.create({
     text: {
-  
+      color: theme.foreground,
     }
   });
 

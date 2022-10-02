@@ -1,13 +1,15 @@
-import { View, StyleSheet } from "react-native";
+import { View, ScrollView, StyleSheet } from "react-native";
 
 import useTheming from "../../hooks/useTheming";
 
 const ScreenView = ({ children, useScrollView = true }) => {
   const theme = useTheming();
 
-  const style = StylesSheet.create({
+  const style = StyleSheet.create({
     screen: {
-      
+      backgroundColor: theme.background,
+      flex: 1,
+      padding: theme.paddingScreen,
     }
   });
 

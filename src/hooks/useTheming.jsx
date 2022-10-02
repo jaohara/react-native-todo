@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useColorScheme } from "react-native";
 
 const palette = {
   "white": "#fff",
@@ -10,8 +11,10 @@ const palette = {
   "purple": "#8A06A6",
 };
 
+const DEFAULT_ACCENT = palette.blue;
+
 const sizes = {
-  borderRadius: 24,
+  borderRadiusBig: 24,
   borderRadiusSmall: 12,
   fontSize: 14,
   fontSizeHeader: 24,
@@ -21,10 +24,11 @@ const sizes = {
 };
 
 const useTheming = () => {
-  const [ accent, setAccent ] = useState(palette.blue);
-  const [ isDarkMode, setIsDarkMode ] = useState(false);
-  const background = isDarkMode ? palette.black : palette.white;
-  const foreground = isDarkMode ? palette.white : palette.black;
+  const [ accent, setAccent ] = useState(DEFAULT_ACCENT);
+  const colorScheme = useColorScheme();
+
+  const background = colorScheme === "dark" ? palette.black : palette.white;
+  const foreground = colorScheme === "dark" ? palette.white : palette.black;
 
 
   // TODO: Is this how I want to do this, or is there a more organized way?
@@ -32,9 +36,10 @@ const useTheming = () => {
     accent, 
     background,
     foreground,
-    isDarkMode, 
+    // isDarkMode: colorScheme === "dark", 
+    isDarkMode: colorScheme, 
     palette, 
-    sizes, 
+    ...sizes,
   };
 };
 
