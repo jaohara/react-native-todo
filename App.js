@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
@@ -9,9 +11,18 @@ import { routes } from "./src/routes";
 // style stuff
 import useTheming from './src/hooks/useTheming';
 
+// test values
+import defaults from './src/defaults';
+
 export default function App() {
   const Nav = createNativeStackNavigator();
   const theme = useTheming();
+
+  // App State
+  const [ user, setUser ] = useState(defaults.user);
+  const [ ]
+
+
 
   // These prop objects are a good example of how I want to go about theming dynamically
   const statusBarProps = {
