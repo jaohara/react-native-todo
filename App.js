@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 // navigation stuff
-import { DefaultTheme, DarkTheme, NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { routes } from "./src/routes";
 
@@ -20,7 +20,7 @@ export default function App() {
 
   // App State
   const [ user, setUser ] = useState(defaults.user);
-  const [ ]
+  const [ todoLists, setTodoLists ] = useState(defaults.todos);
 
 
 
