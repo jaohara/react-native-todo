@@ -40,7 +40,9 @@ const todos = [
   }
 ]
 
-export default defaults = {
+const defaults =  {
   todos: todos,
   user: defaultUser,
 };
+
+export default defaults;

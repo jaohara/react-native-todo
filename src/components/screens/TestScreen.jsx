@@ -44,7 +44,6 @@ const TestScreen = ({ navigation }) => {
   return (
     <ScreenView>
       {renderNavButtons()}
-      <StyledText>Dark Mode: {theme.isDarkMode}</StyledText>
     </ScreenView>
   );
 };
