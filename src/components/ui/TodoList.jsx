@@ -1,22 +1,25 @@
-import { FlatList, StyleSheet } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
 import StyledText from "./StyledText";
 import useTheming from "../../hooks/useTheming";
 
-const TodoList = ({}) => {
+const TodoList = ({ lists = [] }) => {
   const theme = useTheming();
 
   const style = StyleSheet.create({
     wrapper: {
       backgroundColor: theme.backgroundAlt,
-      borderRadius: theme.borderRadius,
+      borderRadius: theme.borderRadiusSmall,
+      padding: theme.padding,
     }
   });
 
   return (
-    <StyledText>
-      TodoList Placeholder!;
-    </StyledText>
+    <View style={style.wrapper}>
+      <StyledText>
+        TodoList Placeholder!
+      </StyledText>
+    </View>
   );
 };
 

@@ -47,10 +47,23 @@ const useTheming = () => {
   const parseColor = (color) => inPalette(color) ? palette[color] : color;
 
   const background = isDark() ? palette.grayDarker : palette.white;
-  const backgroundAlt = isDark() ? palette.grayDark : palette.grayLight;
+  const backgroundAlt = isDark() ? palette.grayDark : palette.grayLighter;
   const foreground = isDark() ? palette.white : palette.black;
   const foregroundAlt = isDark() ? palette.grayLight : palette.grayLight;
 
+  // These are little "object bombs" with style attributes. Just expand them in the
+  //  style object where you need some boilerplate styling.
+  const mixins = {
+    commonList: {
+
+    },
+    commonListItem: {
+
+    },
+    commonListentry: {
+
+    },
+  };
 
   // TODO: Is this how I want to do this, or is there a more organized way?
   return { 
@@ -61,7 +74,8 @@ const useTheming = () => {
     foreground,
     foregroundAlt,
     // isDarkMode: colorScheme === "dark", 
-    isDarkMode: colorScheme, 
+    isDarkMode: colorScheme,
+    mixins, 
     palette,
     parseColor, 
     ...sizes,

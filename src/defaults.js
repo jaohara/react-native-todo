@@ -3,8 +3,8 @@ const defaultUser = "jaohara"
 
 const todos = [
   {
-    name: "Name for Todo List",
-    created: "Date for todo list",
+    name: "First Todo List",
+    created: "10/05/2022",
     user: defaultUser,
     todos: [
       // not important, not due, done
@@ -37,7 +37,28 @@ const todos = [
         todo: "Mail October rent check",
       },
     ],
-  }
+  },
+  {
+    name: "Another Todo List",
+    created: "10/06/2022",
+    user: defaultUser,
+    todos: [
+      // not important, not due, done
+      {
+        complete: true,
+        // due: "Due date, which could be undefined or null (which?)",
+        due: "2022-10-31T16:07:55.004Z",
+        important: false, //boolean value
+        todo: "Buy groceries",
+      },
+    ],
+  },
+  {
+    name: "Empty List",
+    created: "10/07/2022",
+    user: defaultUser,
+    todos: [],
+  },
 ]
 
 const defaults =  {

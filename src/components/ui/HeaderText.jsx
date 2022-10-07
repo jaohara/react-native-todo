@@ -13,8 +13,8 @@ const HeaderText = ({ children }) => {
       // height: theme.fontSizeHeader + 2,
       fontWeight: "bold",
       fontSize: theme.fontSizeHeader,
-      marginTop: 4,
-      marginBottom: 4,
+      marginTop: theme.margin,
+      marginBottom: theme.margin,
       // paddingLeft: 8,
     }
   });
