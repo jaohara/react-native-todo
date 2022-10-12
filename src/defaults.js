@@ -3,6 +3,7 @@ const defaultUser = "jaohara"
 
 const todos = [
   {
+    id: 1,
     name: "First Todo List",
     created: "10/05/2022",
     user: defaultUser,
@@ -39,6 +40,7 @@ const todos = [
     ],
   },
   {
+    id: 2,
     name: "Another Todo List",
     created: "10/06/2022",
     user: defaultUser,
@@ -54,6 +56,7 @@ const todos = [
     ],
   },
   {
+    id:3, 
     name: "Empty List",
     created: "10/07/2022",
     user: defaultUser,

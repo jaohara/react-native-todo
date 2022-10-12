@@ -18,6 +18,9 @@ export const routes = [
   { 
     name: routeNames.overview,
     component: OverviewScreen,
+    options: {
+      headerShown: false,
+    }
   },  
   { 
     name: routeNames.todo,

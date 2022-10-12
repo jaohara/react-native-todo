@@ -9,6 +9,8 @@ const OverviewListItem = ({ title = "No Title", onPress = () => {}}) => {
   const style = StyleSheet.create({
     wrapper: {
       backgroundColor: theme.background,
+      borderBottomColor: theme.backgroundAlt,
+      borderBottomWidth: 1,
       borderRadius: theme.borderRadiusSmall,
       fontSize: theme.fontSizeButton,
       marginBottom: theme.margin,

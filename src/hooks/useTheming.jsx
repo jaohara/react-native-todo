@@ -28,6 +28,7 @@ const sizes = {
   padding: 16,
   paddingButton: 8,
   paddingScreen: 24,
+  paddingHiddenNav: 48,
 };
 
 const useTheming = () => {

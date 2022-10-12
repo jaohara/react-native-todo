@@ -16,12 +16,14 @@ const OverviewScreen = ({ navigation }) => {
   const { user } = useUser();
   const { todos } = useTodos();
 
-
-
   // navigation will probably need to be passed to the flatlist so that each item
   // in it can trigger a nav to the new todo list page
   return (
-    <ScreenView>
+    <ScreenView
+      navigation={navigation}
+      usesHiddenNav={true} 
+      useScrollView={false}
+    >
       <UserDisplay />
       <HeaderText>Todo Lists</HeaderText>
       <OverviewList

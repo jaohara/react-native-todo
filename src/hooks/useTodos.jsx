@@ -11,11 +11,13 @@ const useTodos = () => {
 
   const listExists = (todoList) => todos.includes(todoList);
 
-  // this will take in the user, 
+  // this will take in the user and the list name, create a new list from that 
+  // and append it to the list of lists.
   const createTodoList = (user, name) => setTodos([...todos, {
     // TODO: Replace me with a timestamp
     date: "DatePlacholder",
     name: name,
+    id: todos.length,
     todos: [],
     user: user,
   }]);
